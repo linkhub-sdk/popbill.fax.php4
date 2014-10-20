@@ -56,7 +56,7 @@ class FaxService extends PopbillBase {
 		$RequestForm = array();
 		
 		$RequestForm['snd'] = $Sender;
-		if(empty($ReserveDT)) $RequestForm['sndDT'] = $ReserveDT;
+		if(!empty($ReserveDT)) $RequestForm['sndDT'] = $ReserveDT;
 		$RequestForm['fCnt'] = count($FilePaths);
 		
 		$RequestForm['rcvs'] = $Receivers;
